@@ -10,9 +10,8 @@ import { PrimeNumberPipe } from './pipes/prime-number.pipe';
 import { ListComponent } from "./pages/list/list.component";
 import { DetailComponent } from "./pages/detail/detail.component";
 import { NotFoundComponent } from './pages/not-found/not-found.component';
-
 @NgModule({
-  declarations: [
+  declarations: [ 
     AppComponent,
     CounterComponent,
     ButtonComponent,
