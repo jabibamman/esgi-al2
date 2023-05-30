@@ -17,7 +17,7 @@ export class DetailComponent implements OnDestroy {
     private route: ActivatedRoute,
     private restaurantsService: RestaurantsService,
   ) {
-    this.routeSub = route.params.subscribe(params => this.dishes = restaurantsService.getFood(params['id']));
+    this.routeSub = route.params.subscribe(params => this.dishes = restaurantsService.getFood(params['id']));    
   }
 
   ngOnDestroy() {

@@ -7,8 +7,8 @@ import { CounterComponent } from "./components/counter/counter.component";
 
 const routes: Routes = [
   { path: 'counter', component: CounterComponent },
-  { path: 'detail/:id', component: DetailComponent },
-  { path: 'list', component: ListComponent },
+  { path: 'detail/:id', loadChildren: () => import('./pages/detail/detail.module').then(m => m.DetailModule) },
+  { path: 'list', loadChildren: () => import('./pages/list/list.module').then(m => m.ListModule) },
   { path: '', redirectTo: '/counter', pathMatch: 'full'},
   { path: '**', component: NotFoundComponent}
 ];
