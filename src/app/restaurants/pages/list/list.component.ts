@@ -1,5 +1,5 @@
+import { RestaurantsService } from './../../../services/restaurants.service';
 import { Component } from '@angular/core';
-import {RestaurantsService} from "../../services/restaurants.service";
 
 @Component({
   templateUrl: './list.component.html',

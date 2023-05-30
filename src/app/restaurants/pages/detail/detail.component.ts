@@ -1,7 +1,7 @@
 import {Component, OnDestroy} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {Subscription} from "rxjs";
-import {RestaurantsService} from "../../services/restaurants.service";
+import { RestaurantsService } from 'src/app/services/restaurants.service';
 
 @Component({
   templateUrl: './detail.component.html',
@@ -17,7 +17,7 @@ export class DetailComponent implements OnDestroy {
     private route: ActivatedRoute,
     private restaurantsService: RestaurantsService,
   ) {
-    this.routeSub = route.params.subscribe(params => this.dishes = restaurantsService.getFood(params['id']));    
+    this.routeSub = route.params.subscribe(params => this.dishes = restaurantsService.getFood(params['id']));
   }
 
   ngOnDestroy() {
@@ -25,6 +25,6 @@ export class DetailComponent implements OnDestroy {
   }
 
   backWithRouter(): void {
-    this.router.navigate(['/list']).then();
+    this.router.navigate(['restaurants']).then();
   }
 }
