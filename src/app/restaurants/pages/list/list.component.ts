@@ -1,6 +1,5 @@
 import { RestaurantsService } from './../../../services/restaurants.service';
 import { Component } from '@angular/core';
-import {RestaurantsService} from "../../services/restaurants.service";
 import {Router} from "@angular/router";
 
 @Component({
